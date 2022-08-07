@@ -22,13 +22,26 @@
         <Border Grid.Row="0" Grid.Column ="1" Background="#a86632"/>
         <Border Grid.Row="1" Grid.Column ="0" Background="#a432a8"/>
         <Border Grid.Row="1" Grid.Column ="1" Background="#32a848"/>
+
+        <Grid Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
+                <TextBlock Foreground="White" FontSize="25" Text="Set Pump1 flow rate"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
+                <TextBlock Foreground="White" FontSize="25" Text="Set Pump2 flow rate"/>
+            </StackPanel>
+            
+        </Grid>
         
-
-
-        <StackPanel Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
-            <TextBlock Foreground="White" FontSize="25" Text="Set pump parameters here"/>
-        </StackPanel>
-
         <StackPanel Grid.Row="0" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
             <TextBlock Foreground="White" FontSize="25" Text="Display setting pump graph here"/>
         </StackPanel>
