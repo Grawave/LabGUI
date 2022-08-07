@@ -7,7 +7,39 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    
+        
+        <Border Grid.Row="0" Grid.Column ="0" Background="#2f5cb6"/>
+        <Border Grid.Row="0" Grid.Column ="1" Background="#a86632"/>
+        <Border Grid.Row="1" Grid.Column ="0" Background="#a432a8"/>
+        <Border Grid.Row="1" Grid.Column ="1" Background="#32a848"/>
+        
+
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="25" Text="Set pump parameters here"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="25" Text="Display setting pump graph here"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="25" Text="Display observerd temperature here"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="25" Text="Display actual observerd flow here"/>
+        </StackPanel>
+    </Grid>
+    <!-- <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    </StackPanel> -->
 </Window>

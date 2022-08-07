@@ -28,9 +28,9 @@ namespace LabGUI
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        /*private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
-        }
+            myButton.Content = "modify";
+        }*/
     }
 }
