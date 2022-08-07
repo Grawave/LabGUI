@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LabGUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "LabGUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
