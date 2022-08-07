@@ -23,23 +23,59 @@
         <Border Grid.Row="1" Grid.Column ="0" Background="#a432a8"/>
         <Border Grid.Row="1" Grid.Column ="1" Background="#32a848"/>
 
-        <Grid Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" VerticalAlignment="Top">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
+
+            <!-- Pump flow rates descriptions -->
             
-            <StackPanel Grid.Row="0" Grid.Column="0" Margin="40,0,0,0" VerticalAlignment="Center">
-                <TextBlock Foreground="White" FontSize="25" Text="Set Pump1 flow rate"/>
-            </StackPanel>
-            <StackPanel Grid.Row="0" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
-                <TextBlock Foreground="White" FontSize="25" Text="Set Pump2 flow rate"/>
-            </StackPanel>
+            <TextBlock Foreground="White" FontSize="16" Text="Set Pump1 flow rates" Grid.Row="0" Grid.Column="0" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Foreground="White" FontSize="16" Text="Set Pump2 flow rate" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             
+
+            <!-- Display already added elements -->
+            <ScrollViewer Grid.Row="1" Grid.Column="0" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto" Height="Auto">
+                <ListView x:Name="pump1SettingsListView" Width="Auto" Height="Auto">
+                </ListView>
+            </ScrollViewer>
+            
+            <!-- Input fields for pump 1 flow rate and duration-->
+            <Grid Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto" Height="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <TextBox x:Name="pump1FlowRateInputBox" Grid.Column="0" Grid.Row="0"
+                     PlaceholderText="Flow rate"
+                    HorizontalAlignment="Left" Width="Auto" Height="Auto"/>
+                <TextBox x:Name="pump1DurationInputBox" Grid.Column="1" Grid.Row="0"
+                     PlaceholderText="Duration"
+                    HorizontalAlignment="Left" Width="Auto" Height="Auto"/>
+                <Button x:Name="pump1AddSettingButton" Click="pump1ClickAddSetting" Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto">Add</Button>
+            </Grid>
+            
+            
+            <!-- Pump 2 flow rate input-->
+            <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <ListView x:Name="pump2SettingsList">
+                    <Button x:Name="pump2AddSettingButton" Click="pump2ClickAddSetting">Add</Button>
+                </ListView>
+            </ScrollViewer>
+
+
         </Grid>
         
         <StackPanel Grid.Row="0" Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
